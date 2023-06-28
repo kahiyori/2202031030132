@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragistration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="css/bootstrap/bootstrap.css" type="table/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/DAY6/style.css">
+</head>
+
+<body>
+    <img src="bg.jpg" alt="img" class="main_img">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <form action="Registration.html">
+            <table id="rr">
+                <tr>
+                    <th colspan="2" align="center" id="lf">Registration Form</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        Name
+                        <i class="fa-solid fa-user"></i>
+
+                    </td>
+
+                    <td>
+                        <input type="text" id="txtFirstName" placeholder="First Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                        <i class="fa-solid fa-at"></i>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="Email" id="Email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number<i class="fa-sharp fa-solid fa-phone"></i>
+                    </td>
+                    
+                    <td>
+                        <input type="number" id="Phone" placeholder="Phone Number" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                        <i class="fa-solid fa-person-half-dress"></i>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="Gender" value="Male" required>Male
+                        <input type="radio" name="gender" id="Gender" value="Female" required>Female
+                    </td>
+                </tr>
+                <td>
+                    <label>Date of Birth</label>
+                    <i class="fa-solid fa-cake-candles"></i>
+                </td>
+                <td>
+                    <input type="date" id="DOB" required>
+                </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Password</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </td>
+                    <td>
+                        <input type="password" id="Password" placeholder="Password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Confirm Password</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </td>
+                    <td>
+                        <input type="password" id="CPassword" placeholder="Confirm Password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Address</label>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </td>
+                    <td>
+                        <textarea id="Address" cols="30" rows="2" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Pincode</label>
+                        <i class="fa-sharp fa-solid fa-code"></i>
+                    </td>
+                    <td>
+                        <input type="tel" id="Pincode" placeholder="Pincode" maxlength="6" required>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <i class="fa-sharp fa-solid fa-badge-check"></i>
+                        <label><a href="login.html">Alrady have an account? Login here</a></label>
+
+                    </td>
+                <tr>
+                    <th colspan="2"><button type="submit" id="submit">Submit</button></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="login" id="login">login</button></th>
+
+                </tr>
+
+        </form>
+        </table>
+    </div>
+</body>
+
+</html>

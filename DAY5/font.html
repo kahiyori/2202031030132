@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font awesome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+
+        div{
+            border: 10px outset brown;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: 250px;
+            mask-size: 700px;
+        }
+    </style>
+</head>
+<style>
+    label{
+        font-size: large;
+    }
+    input{
+        font-size: large;
+    }
+    body{
+        background-color: antiquewhite;
+    }
+
+    textarea{
+        background-color: antiquewhite;
+    }
+    input{
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <table align="center" border="2">
+    <form>
+        
+
+            <tr>
+                  <td>
+                      <label>First Name</label>
+                    <i class="fa-solid fa-user"></i>
+            
+                </td>
+                
+                <td>
+                    <input type="text" id="txtFirstName" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Middle Name</label>
+                    <i class="fa-solid fa-user"></i>
+                </td>
+                <td>
+                    <input type="text" id="txtMiddleName" placeholder="Middle Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name</label>
+                    <i class="fa-solid fa-user"></i>
+                </td>
+                <td>
+                    <input type="text" id="txtLastName" placeholder="Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Email</label>
+                    <i class="fa-solid fa-at"></i>
+                </td>
+                <td>
+                    <input type="email" placeholder="Email" id="Email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Phone Number</label>
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                </td>
+                <td>
+                    <input type="number" id="Phone" placeholder="Phone Number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label>Gender</label>
+                <i class="fa-solid fa-person-half-dress"></i>
+            </td>
+            <td>
+                <input type="radio" name="gender" id="Gender" value="Male">Male
+                <input type="radio" name="gender" id="Gender" value="Female">Female
+            </td>
+            </tr>
+        <td>
+                    <label>Date of Birth</label>
+                    <i class="fa-solid fa-cake-candles"></i>
+                </td>
+                <td>
+                    <input type="date" id="DOB">
+                </td>
+            </tr>
+           
+    
+                <td>
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </td>
+                <td>
+                    <input type="password" id="Password" placeholder="Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </td>
+                <td>
+                    <input type="password" id="CPassword" placeholder="Confirm Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Address</label>
+                    <i class="fa-solid fa-location-dot"></i>
+                </td>
+                <td>
+                    <textarea id="Address" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Pincode</label>
+                    <i class="fa-sharp fa-solid fa-code"></i>                                           
+                </td>
+                <td>
+                    <input type="tel" id="Pincode" placeholder="Pincode" maxlength="6">
+                </td>
+            </tr>
+            <tr>
+               
+                <td colspan="2">
+                    <input type="checkbox" id="T&C">
+                    <i class="fa-sharp fa-solid fa-badge-check"></i>
+                    <label>Accept our T&C?</label>
+     
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+                </td>
+            </tr>
+
+        
+    </form>
+</table>
+</body>
+
+</html>
+
+<script>
+     let saveFile = () => {
+            // Get the data from each element on the form.
+            const firstName = document.getElementById("txtFirstName");
+            const lastName = document.getElementById("txtLastName");
+            const middleName = document.getElementById("txtMiddleName");
+            const email = document.getElementById("Email");
+            const phone = document.getElementById("Phone");
+            const gender = document.getElementById("Gender");
+            const age = document.getElementById("Age");
+            const dob = document.getElementById("DOB");
+            const favfood = document.getElementById("FavFood");
+            const hobby = document.getElementById("Hobby");
+            const password = document.getElementById("Password");
+            const confirmpassword = document.getElementById("CPassword");
+            const address = document.getElementById("Address");
+            const pincode = document.getElementById("Pincode");
+            const tc = document.getElementById("T&C");
+            const file = document.getElementById("File");
+
+            // This variable stores all the data.
+            let data = "\r First Name: " + firstName.value + " \r\n " + "Middle Name: " + middleName.value + " \r\n " + "Last Name: " + lastName.value + " \r\n " + "Email: " + email.value + " \r\n " + "Phone: " + phone.value + " \r\n " + "Gender: " + gender.value + " \r\n " + "Age: " + age.value + " \r\n " + "Date of Birth: " + dob.value + " \r\n " + "Question 1: " + favfood.value + " \r\n " + "Hobby: " + hobby.value + " \r\n " + "Password: " + password.value + " \r\n " + "Confirm Password: " + confirmpassword.value + " \r\n " + "Address: " + address.value + " \r\n " + "Pincode: " + pincode.value + " \r\n " + "T&C: " + tc.value + " \r\n " + "File: " + file.value;
+            console.log(data); //printing form data into the console
+            // Convert the text to BLOB.
+            const textToBLOB = new Blob([data], { type: "text/plain" });
+            var filename = new Date();
+            var month =new Date(); //months from 1-12
+            month = month.getMonth();
+
+            var day = new Date();
+            var day = day.getUTCDate();
+
+            var year = new Date();
+            var year = year.getUTCFullYear();
+
+            newdate = year + "/" + month + "/" + day;
+            const sFileName = filename; // The file to save the data.
+
+            let newLink = document.createElement("a");
+            newLink.download = new Date();
+
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+        };
+</script>
